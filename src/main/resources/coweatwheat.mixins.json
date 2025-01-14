@@ -1,9 +1,12 @@
 {
 	"required": true,
+	"minVersion": "0.8",
 	"package": "net.vanion.coweatwheat.mixin",
 	"compatibilityLevel": "JAVA_17",
+	"refmap": "coweatwheat.refmap.json",
 	"mixins": [
-		"ExampleMixin"
+		"CowEntityMixin",
+		"MobEntityAccessor"
 	],
 	"injectors": {
 		"defaultRequire": 1
