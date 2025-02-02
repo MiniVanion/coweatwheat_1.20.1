@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'net.vanion'
-version = '1.0.0'
+version = '2.0.0-1.20.1'
 
 base {
 	archivesName = project.archives_base_name
@@ -72,6 +72,6 @@ loom {
 	mixin {
 		// Add Mixin configuration file
 		//add sourceSets.main, "coweatwheat.mixins.json"
-		defaultRefmapName = "coweatwheat.refmap.json"
+		defaultRefmapName = "coweatwheat.mixins.refmap.json"
 	}
 }

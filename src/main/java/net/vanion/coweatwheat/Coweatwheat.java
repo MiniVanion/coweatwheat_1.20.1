@@ -2,23 +2,18 @@ package net.vanion.coweatwheat;
 
 import net.fabricmc.api.ModInitializer;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 public class Coweatwheat implements ModInitializer {
-	public static final String MOD_ID = "coweatwheat";
-
-	// This logger is used to write text to the console and the log file.
-	// It is considered best practice to use your mod id as the logger's name.
-	// That way, it's clear which mod wrote info, warnings, and errors.
-	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-
 	@Override
 	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
+		// Initialization logic here.
+		// Since configuration is hardcoded, nothing extra is needed.
+		System.out.println("CowEatWheat mod initializing on " +
+				(isServer() ? "server" : "client"));
+	}
 
-		LOGGER.info("Hello Fabric world!");
+	// Optional: if you need to differentiate, you could check environment,
+	// but Fabric Loader will load common mods on both sides.
+	private boolean isServer() {
+		return System.getProperty("fabric.isServer", "false").equals("true");
 	}
 }
